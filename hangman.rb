@@ -39,23 +39,29 @@ class Game
       dic_array.push(word)
     end
 
-    rand_no = rand(0..dic_array.length-1)
-    rand_word = dic_array[rand_no]
-    rand_word_length = rand_word.length-2
+    rand_no = rand(0..dic_array.length-1) #creates rand number within array index length
+    rand_word = dic_array[rand_no] #chooses random word from random number
+    rand_word_length = rand_word.strip.length
 
-
-    until rand_word_length.between?(4,13)
+    until rand_word_length > 4 && rand_word_length < 13 # checks rand word is between 5 and 12 letters
       rand_no = rand(0..dic_array.length-1)
       rand_word = dic_array[rand_no]
-      rand_word_length = rand_word.length-2
+      rand_word_length = rand_word.strip.length
     end
 
     puts rand_no
     puts rand_word
-    puts rand_word.length-2
+    puts rand_word_length
   end
 
 
+
+end
+
+class Display
+  def initialize
+
+  end
 
 end
 
