@@ -28,6 +28,9 @@ saved. Play on!
 class Game
   def initialize
     self.gen_rand_word
+    @display = Display.new
+  
+
 
   end
 
@@ -60,6 +63,7 @@ end
 
 class Display
   def initialize
+
 
   end
 
